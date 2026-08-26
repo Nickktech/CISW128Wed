@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(3, 242, 51);
+}
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(49, 4, 252);
+}
+image{
+    width:100px
+    
+}
+header{
+    color: aqua;
+}
+h1{
+    color: crimson;
+}
+h2{
+    color: azure;
+}
+th{
+    color: gold;
+}
+h1{
+    text-align: center;
+}

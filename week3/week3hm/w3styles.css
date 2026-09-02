@@ -1,0 +1,75 @@
+.nav-item ul
+{
+    list-style-type:none;
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.nav-item a
+{
+    color: rgba(243, 246, 247, 0.961);
+    text-decoration: none;
+    padding: 15;
+    display: block;
+    text-align: center;
+} 
+.nav-item a:hover
+{background-color: rgb(55, 54, 54);}
+
+.nav-item li
+{float: left;}
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+#site-footer
+{ 
+    background-color: black;
+    text-align: center;
+    color: aqua;
+}
+
+a:visited
+{
+    color: rgb(246, 6, 6);
+}
+a:hover
+{
+    color: rgb(255, 255, 0);
+    text-decoration: wavy;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-size: 50px;
+}
+a:active
+{
+    color: rgb(255, 0, 0);
+    text-decoration: underline;
+}
+p
+{
+    margin: 60px;       /* space outside the element */
+    border: 5px dashed rgb(2, 0, 0);  /* border around the element, visable outline */ 
+    padding: 10px; /* space inside the element */
+}
+body
+{background-color: chartreuse;}
+
+
+#paragraph1
+{
+    background-color: rgb(243, 247, 245);
+}
+h1
+{
+    text-align: center;
+}
+#p1
+{
+    margin: 30px;       /* space outside the element */
+    border: 5px solid rgb(185, 5, 5);  /* border around the element, visable outline */ 
+    padding: 20px; /* space inside the element */
+    background-color: rgb(243, 247, 247);
+}

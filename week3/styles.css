@@ -1,0 +1,88 @@
+body
+{ background-color:cyan; 
+  font-family: Arial, sans-serif; 
+  margin: 0; 
+  padding: 0; 
+}
+/*problem: what if you want to style multiple elements the same way?
+/*our solution are classes and ids
+classes are used for multiple elements
+ids are used once , one and done
+
+
+classes start with a period .classname */
+
+.highlight
+{
+  background-color: yellow;
+  font-weight: bold;
+}
+
+/*and ids start with a hash #idname */
+/*ids are only used once per page, and are unique to that element.*/
+#mainheader
+{
+  background-color: rgb(52, 230, 17);
+  padding: 40px;
+  text-align: center;
+  font-size: 32px;
+}
+/* can have multiple*/
+#content
+{
+  padding: 20px;
+  font-size: 18px;
+}
+
+
+
+/*
+evertyhing in css is a box, each box has layers::
+1. content: text, image, whatever is inside
+2. padding: space between content and border
+3. border: the line around the element
+4. margin: space between the border and other elements and other elements
+|<--margin-->|<--border-->|<--padding-->|<--content-->| padding | border |<-----margin----->|
+use margoin to seperate elements apart , and padding to give breathing room inside the element
+*/
+p
+{
+    margin: 60px;       /* space outside the element */
+    border: 5px dashed rgb(196, 29, 29);  /* border around the element, visable outline */ 
+    padding: 10px; /* space inside the element */
+}
+
+
+#paragraph1
+{
+    background-color: rgb(6, 241, 76);
+}
+
+/*
+links can change style depending on their state:
+a:link>>- default state, unvisited link
+a:visited>> - visited link
+a:hover>> - when the mouse is over the link
+a:active>> - when the link is clicked 
+*/
+a:link
+{
+    color: rgb(207, 11, 148);
+    text-decoration: none;
+}
+a:visited
+{
+    color: rgb(139, 0, 139);
+}
+a:hover
+{
+    color: rgb(255, 255, 0);
+    text-decoration: wavy;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-size: 50px;
+}
+a:active
+{
+    color: rgb(255, 0, 0);
+    text-decoration: underline;
+}

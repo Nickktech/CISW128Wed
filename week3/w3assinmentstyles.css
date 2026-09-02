@@ -1,0 +1,90 @@
+    /* this is ther body modified in the css file */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(3, 242, 51);
+    font-size: 20px;
+}
+/* this is an id selector for the main header */
+#page1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(49, 4, 252);
+    font-size: 30px;
+}
+#center-para{
+    text-align: center;
+}
+
+
+/* this changes size of my image */
+image{
+    width:100px
+    
+}
+/* this is my css for my header */
+h1{
+    font-size: 40px;
+    color: crimson;
+    text-align: center;
+}
+h2{
+    font-size: 40px;
+    color: azure;
+}
+th{
+    color: gold;
+}
+
+/* this is a class */
+.highlight{
+    background-color: rgb(255, 0, 0);
+}
+/* this is a class */
+.section-box{
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+/* this is a class */
+.boxmodel{
+    box-sizing: border-box;
+}
+/* this is a navigation bar edited  */
+a:link
+{
+    color: rgb(207, 11, 148);
+    text-decoration: none;
+}
+a:visited
+{
+    color: rgb(139, 0, 139);
+}
+a:hover
+{
+    color: rgb(255, 255, 0);
+    text-decoration: wavy;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-size: 50px;
+}
+a:active
+{
+    color: rgb(255, 0, 0);
+    text-decoration: underline;
+}
+p
+{
+    margin: 100px;      
+    border: 5px dashed rgb(196, 29, 29);  
+    padding: 10px;
+    text-align: center;
+}
+/* this is id */
+#mainheader
+{
+  background-color: rgb(49, 17, 230);
+  padding: 40px;
+  text-align: center;
+  font-size: 32px;
+}
+
+
+

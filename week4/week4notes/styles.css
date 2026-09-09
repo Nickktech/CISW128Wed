@@ -1,0 +1,35 @@
+body 
+{}
+
+nav
+{
+    display: flex;
+    gap: 20px;
+    /* rather then adding margins to every items gap creates consistant between flex items  */
+}
+.cards
+{
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+    /*works better in a row */
+    justify-content: space-between;
+    /* spaces it out evenly*/
+    align-items: center;
+    flex-wrap: wrap; 
+    /*this is for adjusting the screen to fit between a computer screen and a iphone */
+}
+
+p 
+{
+ color: red;
+}
+.red 
+{
+    color: yellow;
+}
+#blue
+{
+    color: black;
+}
+/* presidentcy of opperation p/.red/#blue */

@@ -1,0 +1,94 @@
+/* this is how i was able to style my nav bar  */
+.nav-item ul
+{
+    list-style-type:none;
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+/* this styles every a tag in my nav bar */
+.nav-item a
+{
+    color: rgba(243, 246, 247, 0.961);
+    text-decoration: none;
+    padding: 15;
+    display: block;
+    text-align: center;
+} 
+/* this allows me to add a hover attribute on all my a tags in my nav bar */
+.nav-item a:hover
+{background-color: rgb(55, 54, 54);}
+
+/* this allows me to change it to a vertical list to a horizontal nav bar */
+.nav-item li
+{float: left;}
+*
+{
+    margin: 0;
+    padding: 0;
+}
+/* this is my css for my footer */
+#site-footer
+{ 
+    background-color: black;
+    text-align: center;
+    color: aqua;
+}
+/* this allows me to change diiferent things about my nav bar */
+a:visited
+{
+    color: rgb(246, 6, 6);
+}
+a:hover
+{
+    color: rgb(255, 255, 0);
+    text-decoration: wavy;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-size: 50px;
+}
+a:active
+{
+    color: rgb(255, 0, 0);
+    text-decoration: underline;
+}
+/* i took this from the notes to help me make the paragraphs look better */
+p
+{
+    margin: 60px;       /* space outside the element */
+    border: 5px dashed rgb(2, 0, 0);  /* border around the element, visable outline */ 
+    padding: 10px; /* space inside the element */
+}
+body
+{background-color: chartreuse;}
+
+
+#paragraph1
+{
+    background-color: rgb(243, 247, 245);
+}
+h1
+{
+    text-align: center;
+}
+#p1
+{
+    margin: 30px;       /* space outside the element */
+    border: 5px solid rgb(185, 5, 5);  /* border around the element, visable outline */ 
+    padding: 20px; /* space inside the element */
+    background-color: rgb(243, 247, 247);
+}
+
+/* this is how i was able to style the table 2 although i do think styling it in html is better but if i wanted to use 
+this esact table format on different tables this would be easier */
+.table2layout
+{
+    width: 200px;
+    text-align: left;
+}
+.table2
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 80px;
+}

@@ -22,10 +22,10 @@ else {
 
 //  weather question
 let weather=(prompt("is it raining or is it sunny outside?"));
-if (weather===raining){
+if (weather==="raining"){
     console.log("I should bring an umbrella");
 }
-if (weather===sunny){
+else if (weather==="sunny"){
     console.log("I should bring a t-shirt");
 }
 else {

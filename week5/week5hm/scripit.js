@@ -26,5 +26,6 @@ console.log(game);
 console.log(RS);
 
 
-document.body.innerHTML += "<p>result: " + total "</p>";
+document.body.innerHTML += "<p>result: " + total;
+
 

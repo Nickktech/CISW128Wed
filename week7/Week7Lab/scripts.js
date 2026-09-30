@@ -12,7 +12,11 @@ for(let i=1; i<=num; i++){
 
 // 3.building a triangle
 let triangle="";
+// this is the start
 for(let line=1;line<=7;line++){
+    // start and finish of triangle to stop infiniate
     triangle+="*";
+    // this is just the emblem of the triangle
     console.log(triangle)
+    // prints triangle
 }

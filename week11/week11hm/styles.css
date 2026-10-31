@@ -1,0 +1,34 @@
+/* light mode */
+body {
+    font-family: Arial, sans-serif;
+    background: #add8e6;
+    color: #000000;
+    padding: 1rem;
+    }
+    /* The 'dark' theme we will toggle later */
+
+
+    /* Darkmode */
+.dark {
+    background: #000000;
+    color: #bfff00
+    }
+
+
+    
+/* light mode button */
+button {
+background: #ffffff;
+color:#000000;
+padding: 10px;
+margin: 5px;
+border: 2px solid #000000;
+cursor: pointer;
+}
+
+/* Dark mode button */
+.dark button {
+background: #bfff00;
+color: #000000;
+border: 2px solid #ffffff;
+}

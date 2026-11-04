@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>_week12_lab</title> <!-- Fill in: page title -->
+</head>
+<body>
+  <h1>week12_lab</h1> <!-- Fill in: heading text -->
+ <br>
+  <br>
+   <br>
+  <form id="contactform"> <!-- Give your form an id -->
+    <label for="name">Name:</label> <!-- Label text -->
+    <input id="name" type="text" placeholder="Your name" required />
+    <br>
+ <br>
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" placeholder="you@example.com" required />
+ <br>
+  <br>
+    <label for="message">Message:</label>
+    <textarea id="message" rows="4" placeholder="Write something..."></textarea>
+ <br>
+  <br>
+    
+      <label for="color">Fav color?</label>
+           <select id="color">
+                <option value="red">red</option>
+                <option value="blue">blue</option>
+                <option value="Green">green</option>
+                <option value="gray">gray</option>
+           </select>
+           <button type="submit">Submit</button> <!-- Button type and text -->
+  </form>
+ <br>
+  <br>
+  <section id="results"></section> <!-- Section to display results -->
+ <br>
+  <script src="scripts.js"></script> <!-- JS file name -->
+
+
+
+
+
+
+ 
+</body>
+</html>
+
+<!--1. ids make it so you can call a certain area and you are able to target it with CSS or JavaScript -->
+ <!--2. your script tag must be at the bottom or defered because the browser reads the page from top to bottom -->

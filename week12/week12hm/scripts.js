@@ -2,14 +2,7 @@ const form = document.getElementById("pizzaform");
 
 form.addEventListener("submit", function(event){
     event.preventDefault();
-// this adds the new element i created to the website and reads it back in a paragraph im creating.... but i didnt get it to work and have no idea what im doing
-// but i left it on here because im use it as an example for my final 
 
-    details.forEach(function(detail){
-        const p = document.createElement("p");
-        p.textContent = detail;
-        result.appendChild(p)
-        });
         
 
 // Cx name
@@ -67,14 +60,19 @@ const details = [
     "Customer: "+  name,
     "Date: "+ new Date ().toLocaleDateString(),
     "Pizza: "+ pizzasize,
-    "Toppings: "+  toppings.join(", ") || "none",
+    "Toppings: " +  toppings.join(", ") || "none",
     "Quantity: "+ quantity,
-    "Instructions: "+ Instructions || "none",
+    "Instructions: " + Instructions || "none",
     "Total: $" + total.toFixed(2)
 ];
-// this adds the new element i created to the website and reads it back in a paragraph im creating.... but i didnt get it to work and have no idea what im doing
-// but i left it on here because im use it as an example for my final 
 
+// this adds the new element i created to the website and reads it back 
+
+details.forEach(function(detail){
+    const p = document.createElement("p");
+    p.textContent = detail;
+    result.appendChild(p)
+    });
     
 
 });

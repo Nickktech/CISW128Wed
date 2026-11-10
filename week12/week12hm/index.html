@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza order Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Pizza order</h1>
+
+        <p>today's date: <span id="currentdate"></span></p>
+
+
+        <form id="Pizzaform">
+            <label for="customerName">Your name</label>
+            <input type="text" id="customerName">
+
+        <h3>Choose pizza size</h3>
+        <select id="pizzasize">
+            <option value="8">Small - 10$</option>
+            <option value="12">Medium - 15$</option>
+            <option value="16">Large - 20$</option>
+        </select>
+
+        
+        <h3>Choose Toppings (5$ each)</h3>
+        
+            <label>
+                <input type="checkbox" name="Toppings" value="sausage">
+                Sausage
+            </label>
+
+            <label>
+                <input type="checkbox" name="Toppings" value="pepperoni">
+                Pepperoni
+            </label>
+
+            <label>
+                <input type="checkbox" name="Toppings" value="jalapenos">
+                Jalapenos
+            </label>
+
+            <label>
+                <input type="checkbox" name="Toppings" value="olives">
+                Olives
+            </label>
+
+            <label>
+                <input type="checkbox" name="Toppings" value="extra cheese">
+                Extra cheese
+            </label>
+
+        <h3>Quantity</h3>
+        <input type="number" id="Quantity" value="1" min="1">
+
+        <h3>Special Instructions</h3>
+        <input id="Instructions" rows="4"
+            placeholder="example: Extra sauce, light cheese">
+
+
+
+        <button type="submit">Place order</button>
+        </form>
+
+        <div id="orderResult"></div>
+    </div>
+</body>
+</html>

@@ -2,6 +2,15 @@ const form = document.getElementById("pizzaform");
 
 form.addEventListener("submit", function(event){
     event.preventDefault();
+// this adds the new element i created to the website and reads it back in a paragraph im creating.... but i didnt get it to work and have no idea what im doing
+// but i left it on here because im use it as an example for my final 
+
+    details.forEach(function(detail){
+        const p = document.createElement("p");
+        p.textContent = detail;
+        result.appendChild(p)
+        });
+        
 
 // Cx name
 const name = document.getElementById("customerName").value;
@@ -9,7 +18,7 @@ const name = document.getElementById("customerName").value;
 // dropdown
 const size = document.getElementById("pizzasize");
 const pizzaprice = Number(size.value);
-const pizzasize = size.options[size.selectIndex].text;
+const pizzasize = size.options[size.selectedIndex].text;
 
 // toppings
 const checkedtoppings = document.querySelectorAll(
@@ -23,9 +32,9 @@ checkedtoppings.forEach(function(topping){
 })
 
 // quantity
-const quantity = Number(document.getElementById("quantity").value);
+const quantity = Number(document.getElementById("Quantity").value);
 
-if (!Number.isInteger(Quantity) || Quantity <1){
+if (!Number.isInteger(quantity) || quantity <1){
     alert("please enter a valid quantity.");
     return;
 }
@@ -55,21 +64,17 @@ result.appendChild(heading);
 
 // so this im telling what to add to the summary i created and telling it where to get the info and if theres no info put none
 const details = [
-    "Customer", name,
-    "Date",new Date ().toLocaleDateString(),
-    "Pizza", pizzasize,
-    "Toppings", toppings.join(", ") || "none",
-    "Quantity", quantity,
-    "Instructions", instructions || "none",
-    "Total", "$" + total.toFixed(2)
+    "Customer: "+  name,
+    "Date: "+ new Date ().toLocaleDateString(),
+    "Pizza: "+ pizzasize,
+    "Toppings: "+  toppings.join(", ") || "none",
+    "Quantity: "+ quantity,
+    "Instructions: "+ Instructions || "none",
+    "Total: $" + total.toFixed(2)
 ];
 // this adds the new element i created to the website and reads it back in a paragraph im creating.... but i didnt get it to work and have no idea what im doing
 // but i left it on here because im use it as an example for my final 
-details.forEach(function(detail){
-    const p = document.createElement("p");
-    p.textcontent = detail;
-    result.appendChild(p)
-    });
+
     
 
 });

@@ -1,99 +1,132 @@
-const form = document.getElementById("contactform");
-const username = document.getElementById("username");
-const email= document.getElementById("email");
-const age = document.getElementById("age");
 
+ // Select the form
+const form = document.getElementById("contactForm");
+
+// Select the error messages
 const nameError = document.getElementById("nameError");
 const emailError = document.getElementById("emailError");
 const ageError = document.getElementById("ageError");
+const successMessage = document.getElementById("successMessage");
 
-const successMessage = document.getElementById("successMessage")
-
-
-// regex pattern
+// Email pattern from the notes
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// name check
-function checkName(){
-    let name = document.getElementById("username").value;
 
-    if (name.trim() === ""){
-        nameError.textContent = "you must enter"
-    }
-}
-// email check
-function checkEmail(){
-    const emailValue = email.value.trim();
+// Check name when user leaves the field
+const username = document.getElementById("username");
 
-    if (emailValue === ""){
-        emailError.textContent = "Please enter your email.";
-        return false;
+username.addEventListener("blur", function() {
+
+    let name = username.value;
+
+    if (name.trim() === "") {
+        nameError.textContent = "You must enter your name.";
+    } else {
+        nameError.textContent = "";
     }
-    else if (!emailPattern.test(emailValue)){
+
+});
+
+
+// Check email when user leaves the field
+const emailInput = document.getElementById("email");
+
+emailInput.addEventListener("blur", function() {
+
+    let email = emailInput.value;
+
+    if (email.trim() === "") {
+        emailError.textContent = "You must enter your email.";
+    } else if (emailPattern.test(email.trim()) === false) {
         emailError.textContent = "Please enter a valid email.";
-        return false
-    }
-    else {
+    } else {
         emailError.textContent = "";
-        return true
     }
-}
 
-// age check
-function checkAge(){
-    const ageValue = age.value.trim();
-    const ageNumber = number(ageValue);
-
-    if (ageValue === ""){
-        ageError.textContent = " Please enter your age";
-        return false;
-    }
-    else if (!Number.isInteger(ageNumber) || ageNumber < 1){
-        ageError.textContent = "You must be older the 1 years old"
-        return false
-    }
-    else {
-        ageError.textContent= "";
-        return true
-    }
-}
-
-
-// blur. after users leave this area it checks its value
-username.addEventListener("blur", function(){
-    checkName();
 });
 
-email.addEventListener("blur", function(){
-    checkEmail();
+
+// Check age when user leaves the field
+const ageInput = document.getElementById("age");
+
+ageInput.addEventListener("blur", function() {
+
+    let age = ageInput.value;
+
+    if (age.trim() === "") {
+        ageError.textContent = "You must enter your age.";
+    } else if (Number(age) < 1 || Number.isInteger(Number(age)) === false) {
+        ageError.textContent = "Please enter a valid age.";
+    } else {
+        ageError.textContent = "";
+    }
+
 });
 
-age.addEventListener("blur", function(){
-    checkAge();
-});
 
-form.addEventListener("submit", function(event){
-    // stops refreshes
+// Check the form when the submit button is clicked
+form.addEventListener("submit", function(event) {
+
+    // Stop the page from refreshing
     event.preventDefault();
 
-    // clears old successmessage
-    successMessage.textContent = " ";
+    // Get the information entered
+    let name = username.value;
+    let email = emailInput.value;
+    let age = ageInput.value;
 
-    // validates
-    const validName = checkName();
-    const validEmail = checkEmail();
-    const validAge = checkAge();
+    // Check if the form is valid
+    let valid = true;
+
+    successMessage.textContent = "";
 
 
-    // successmessage if everything is filled out 
-    if (validName && validAge && validEmail){
+    // Check name
+    if (name.trim() === "") {
+        nameError.textContent = "You must enter your name.";
+        valid = false;
+    } else {
+        nameError.textContent = "";
+    }
+
+
+    // Check email
+    if (email.trim() === "") {
+        emailError.textContent = "You must enter your email.";
+        valid = false;
+    } else if (emailPattern.test(email.trim()) === false) {
+        emailError.textContent = "Please enter a valid email.";
+        valid = false;
+    } else {
+        emailError.textContent = "";
+    }
+
+
+    // Check age
+    if (age.trim() === "") {
+        ageError.textContent = "You must enter your age.";
+        valid = false;
+    } else if (Number(age) < 1 || Number.isInteger(Number(age)) === false) {
+        ageError.textContent = "Please enter a valid age.";
+        valid = false;
+    } else {
+        ageError.textContent = "";
+    }
+
+
+    // If everything is correct, show success
+    if (valid === true) {
+
         successMessage.textContent = "Form submitted successfully!";
 
+        // Clear the form
         form.reset();
 
-        nameError.textContent = " ";
-        emailError.textContent = " ";
-        ageError.textContent = " ";
-    }
-});
+        // Clear error messages
+        nameError.textContent = "";
+        emailError.textContent = "";
+        ageError.textContent = "";
 
+    }
+
+});

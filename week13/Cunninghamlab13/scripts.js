@@ -1,8 +1,8 @@
 
- // Select the form
-const form = document.getElementById("contactForm");
+ // form
+const form = document.getElementById("contactform");
 
-// Select the error messages
+// error messages
 const nameError = document.getElementById("nameError");
 const emailError = document.getElementById("emailError");
 const ageError = document.getElementById("ageError");
@@ -12,7 +12,7 @@ const successMessage = document.getElementById("successMessage");
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
-// Check name when user leaves the field
+// Check name 
 const username = document.getElementById("username");
 
 username.addEventListener("blur", function() {
@@ -28,7 +28,7 @@ username.addEventListener("blur", function() {
 });
 
 
-// Check email when user leaves the field
+// Check email 
 const emailInput = document.getElementById("email");
 
 emailInput.addEventListener("blur", function() {
@@ -46,7 +46,7 @@ emailInput.addEventListener("blur", function() {
 });
 
 
-// Check age when user leaves the field
+// Check age 
 const ageInput = document.getElementById("age");
 
 ageInput.addEventListener("blur", function() {

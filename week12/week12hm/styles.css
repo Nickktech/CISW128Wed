@@ -1,0 +1,44 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(124, 126, 124);
+    justify-content: center;
+}
+
+.container{
+    background-color: antiquewhite;
+    padding: 35px;
+    width: 350px;
+    border-radius: 12px;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+h3{
+    color: darkblue;
+}
+label{
+    display: block;
+    margin: 10px 0;
+}
+button{
+    background-color: rgb(6, 173, 75);
+    color: aliceblue;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+button:hover{
+    color: red;
+}
+
+orderResult{
+    margin-top: 20px;
+    font-weight: bold;
+    line-height: 1.6;
+}
